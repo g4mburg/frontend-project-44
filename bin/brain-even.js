@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 import nameQuestion from '../src/cli.js';
+import logicOfGames from '../src/index.js';
 
 function evenGame() {
   const name = nameQuestion();
@@ -13,14 +13,9 @@ function evenGame() {
     } else {
       correctAnswer = 'no';
     }
-    const answer = readlineSync.question(`Question: ${number} \n Your answer: `);
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-      if (i === 2) {
-        console.log(`Congratulations, ${name}!`);
-      }
-    } else if (answer !== correctAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \n Let's try again, ${name}!`);
+    const correctChecker = logicOfGames(i, number, correctAnswer, name);
+    console.log(correctChecker);
+    if (correctChecker !== 'Correct!') {
       break;
     }
   }
