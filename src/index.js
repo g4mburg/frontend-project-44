@@ -3,8 +3,8 @@ import readlineSync from 'readline-sync';
 export default function logicOfGames(i, number, correctAnswer, name) {
   const answer = readlineSync.question(`Question: ${number} \n Your answer: `);
   let result = '';
-  switch (answer) {
-    case correctAnswer:
+  switch (answer.toString()) {
+    case correctAnswer.toString():
       result = 'Correct!';
       if (i === 2) {
         result = `Congratulations, ${name}!`;
