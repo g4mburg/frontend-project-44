@@ -4,7 +4,7 @@ import logicOfGames from '../src/index.js';
 
 function brainProgression() {
   const name = nameQuestion();
-  console.log('What is the result of the expression?');
+  console.log('What number is missing in the progression?');
   function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
