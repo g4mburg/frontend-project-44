@@ -8,7 +8,9 @@ function brainGCD() {
   function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  function getGCD(a, b) {
+  function getGCD(firstNumber, secondNumber) {
+    let a = firstNumber;
+    let b = secondNumber;
     while (a !== b) {
       if (a < b) {
         const c = a;
