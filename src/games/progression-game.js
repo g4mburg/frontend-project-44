@@ -8,7 +8,7 @@ export default function brainProgression() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   for (let i = 0; i < 3; i += 1) {
-    let number = '';
+    let number;
     let correctAnswer = 0;
     const step = getRandomIntInclusive(2, 7);
     const numberOfHiddenNumber = getRandomIntInclusive(0, 9);
