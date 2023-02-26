@@ -3,7 +3,7 @@ import logicOfGames from '../index.js';
 
 export default function evenGame() {
   const name = nameQuestion();
-  console.log('Answer "yes" if number odd otherwise answer "no"');
+  console.log('Иди нахуй');
   for (let i = 0; i < 3; i += 1) {
     const number = Math.ceil(Math.random() * 100);
     let correctAnswer = '';
