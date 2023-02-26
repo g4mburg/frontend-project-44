@@ -14,7 +14,9 @@ export default function brainProgression() {
     const numberOfHiddenNumber = getRandomIntInclusive(0, 9);
     let currentNumber = getRandomIntInclusive(1, 50);
     for (let j = 0; j < 10; j += 1) {
-      if (j !== numberOfHiddenNumber) {
+      if (j === 0) {
+        number = currentNumber;
+      } else if (j !== numberOfHiddenNumber) {
         number = (`${number} ${currentNumber}`);
       } else {
         correctAnswer = currentNumber;
